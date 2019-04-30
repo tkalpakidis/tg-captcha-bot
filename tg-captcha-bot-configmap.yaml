@@ -1,0 +1,27 @@
+apiVersion: v1
+data:
+  config.toml: |
+    # Config file for Telegram Captcha Bot
+
+    # Button text
+    button_text = "I'm not a robot!"
+
+    # Bot sends this message to new users
+    welcome_message = "Hello! This is the spam protection system. Please press the button within 30 seconds or you will be banned!"
+
+    # Edit welcome message with this text if user passed validation
+    after_success_message = "User passed the validation."
+
+    # Edit welcome message with this text if user failed validation
+    after_fail_message = "User didn't pass the validation and was banned."
+
+    # Show success and failure messages or delete them. Pick "show" or "del"
+    print_success_and_fail_messages_strategy = "show"
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2019-04-30T03:11:46Z"
+  name: devopsishbot-config
+  namespace: devopsishbot
+  resourceVersion: "8740268"
+  selfLink: /api/v1/namespaces/devopsishbot/configmaps/devopsishbot-config
+  uid: b05d08b7-6af5-11e9-81cb-16338c55de20

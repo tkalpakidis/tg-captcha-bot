@@ -72,7 +72,7 @@ docker-compose logs
 
 ## Kubernetes Instructions
 
-1. Retrieve your token from telegram's [@botfather](https://telegram.me/BotFather) 
+1. Create and Retrieve your bot and token from telegram's [@botfather](https://telegram.me/BotFather)  
 
 2. Create a secret that holds your token.
 
@@ -87,7 +87,7 @@ kubectl apply -f tg-captcha-bot-configmap.yaml
 kubectl apply -f tg-captcha-bot-deployment.yaml
 ```
 
-2. 
+4. Add the bot to your supergroup and give it administrator privileges
 
 ## Commands
 

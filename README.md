@@ -70,6 +70,25 @@ docker-compose logs
 
 6. Add the bot to your supergroup and give it administrator privileges
 
+## Kubernetes Instructions
+
+1. Create and Retrieve your bot and token from telegram's [@botfather](https://telegram.me/BotFather)  
+
+2. Create a secret that holds your token.
+
+```bash
+kubectl create secret generic bot-token --type=token --from-literal=token={paste-your-token}
+```
+
+3. Apply K8s manifests
+
+```bash
+kubectl apply -f tg-captcha-bot-configmap.yaml
+kubectl apply -f tg-captcha-bot-deployment.yaml
+```
+
+4. Add the bot to your supergroup and give it administrator privileges
+
 ## Commands
 
 `/healthz` - check that the bot is working correctly

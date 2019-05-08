@@ -18,3 +18,5 @@ data:
 
     # Show success and failure messages or delete them. Pick "show" or "del"
     print_success_and_fail_messages_strategy = "show"
+metadata:
+  name: bot-config

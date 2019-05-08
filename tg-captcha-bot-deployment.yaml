@@ -23,7 +23,7 @@ spec:
         - name: TGTOKEN
           valueFrom:
             secretKeyRef:
-              name: devopsishbot-token
+              name: bot-token
               key: token
         image: quay.io/chrisshort/tg-captcha-bot:latest
         name: tg-captcha-bot
@@ -42,4 +42,4 @@ spec:
       volumes:
       - name: config-volume
         configMap:
-          name: devopsishbot-config
+          name: bot-config

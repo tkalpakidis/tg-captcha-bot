@@ -90,7 +90,7 @@ func challengeUser(m *tb.Message) {
 	}}}
 	challengeMsg, _ := bot.Reply(m, config.WelcomeMessage, &tb.ReplyMarkup{InlineKeyboard: inlineKeys})
 
-	time.AfterFunc(30*time.Second, func() {
+	time.AfterFunc(15*time.Second, func() {
 		_, passed := passedUsers.Load(m.UserJoined.ID)
 		if !passed {
 			chatMember := tb.ChatMember{User: m.UserJoined, RestrictedUntil: tb.Forever()}

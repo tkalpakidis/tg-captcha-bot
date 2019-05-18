@@ -1,20 +1,22 @@
 apiVersion: v1
 kind: ConfigMap
+metadata:
+  name: tg-captcha-bot-configmap
 data:
   config.toml: |
     # Config file for Telegram Captcha Bot
 
     # Button text
-    button_text = "I'm not a robot!"
+    button_text = "I'm a meat popsicle (human)"
 
     # Bot sends this message to new users
-    welcome_message = "Hello! This is the spam protection system. Please press the button within 15 seconds or you will be banned!"
+    welcome_message = "Hello! I'm Bot'ish, the spam protection system. Please press the button within 15 seconds or you will be banned!"
 
     # Edit welcome message with this text if user passed validation
-    after_success_message = "User passed the validation."
+    after_success_message = "👍 ✅ 🎉"
 
     # Edit welcome message with this text if user failed validation
-    after_fail_message = "User didn't pass the validation and was banned."
+    after_fail_message = "👎 🚫 🤖"
 
     # Show success and failure messages or delete them. Pick "show" or "del"
-    print_success_and_fail_messages_strategy = "show"
+    print_success_and_fail_messages_strategy = "del"
